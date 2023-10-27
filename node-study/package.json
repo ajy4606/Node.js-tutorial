@@ -1,0 +1,14 @@
+{
+  "name": "node-study",
+  "version": "1.0.0",
+  "description": "class101 웹 개발자 사관학교",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajy4606",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
