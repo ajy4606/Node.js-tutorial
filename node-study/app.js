@@ -1,15 +1,18 @@
 import express from "express";
 import helmet from "helmet";
 import ejs from "ejs";
+import path from "path";
 //cont express = require('express');
 //const helmet = require('helmet');
 
 // express 선언
 const app = express();
 
+const __dirname = path.resolve();
+
 //html 설정
-app.set('view engine', ejs);
-app.set('view', './views');
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 //css 설정
 app.use('/public', express.static(__dirname+'/public'));

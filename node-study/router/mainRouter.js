@@ -9,8 +9,8 @@ router.get("/", function(req,res){
 
     // res.send({"Key":"Value"});
 
-    res.render('index');
-    // 그림판을 전달할 때는 render
+    res.render('index', {title:"EJS 메인페이지"});
+    // 그림판을 전달할 때는 render, render는 항상 views 폴더를 바라보고 있음, title 서버 사이드
 })
 // get방식의 api를 만듦
 
