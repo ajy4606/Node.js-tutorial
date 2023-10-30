@@ -7,9 +7,8 @@ import path from "path";
 
 // express 선언
 const app = express();
-
 const __dirname = path.resolve();
-
+import db from "./model/db.js";
 //html 설정
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -29,5 +28,8 @@ import mainRouter from "./router/mainRouter.js";
 app.use('/',mainRouter);
 
 app.listen(3000, function(req,res){
+
+    db.sequelize.sync({force:false}); 
+    //false 항상 모델 폴더를 바라보고 업데이트를 해줌, true 데이터를 날리고 초기화
     console.log("서버가 실행되고 있다!");
 })
